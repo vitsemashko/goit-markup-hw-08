@@ -1,0 +1,108 @@
+/*Footer*/
+.page-footer {
+	margin: 0px;
+	background-color: $bcg-color-two;
+	padding-top: 94px;
+	padding-bottom: 60px;
+}
+.page-footer .container {
+	display: flex;
+	gap: 70px;
+}
+.logo--second {
+	font-family: $font-second;
+	@include font(700, 26px, 1.19, 0.03em);
+	color: $bcg-color-one;
+}
+.logo__link--inverse {
+	margin-bottom: 20px;
+}
+.address__item .address__link--physical {
+	@include font(400, 14px, 1.71, 0.03em);
+	color: $bcg-color-one;
+}
+.address__link {
+	@include font(400, 14px, 1.71, 0.03em);
+	color: $address-link-color;
+	transition: color $duration $timing-function;
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+.address__item:not(:last-child) {
+	margin-bottom: 9px;
+}
+.social-media__list {
+	display: flex;
+	gap: 10px;
+}
+.form__title {
+	@include font(700, 14px, 1.14, 0.03em);
+	text-transform: uppercase;
+	color: $bcg-color-one;
+	margin-bottom: 20px;
+}
+.input--mail {
+	width: 358px;
+	height: 50px;
+
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	color: rgba(255, 255, 255, 0.6);
+	background-color: $bcg-color-two;
+	padding-left: 16px;
+}
+.btn-in {
+	align-items: center;
+	color: $bcg-color-one;
+	display: flex;
+	@include font(700, 16px, 1.88, 0.06em);
+	margin: 9px 28px;
+	text-align: center;
+}
+.btn-in svg {
+	flex-shrink: 0;
+	margin-left: 10px;
+}
+.subs-btn {
+	background-color: $accent-color;
+	border-radius: 4px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	height: 50px;
+	transition: background-color $duration $timing-function,
+		box-shadow $duration $timing-function;
+	width: 200px;
+
+	&:hover,
+	&:focus {
+		background-color: $btn-secondary-accent-color;
+	}
+}
+.form--mail {
+	display: flex;
+	gap: 12px;
+}
+.logo-two {
+	margin-bottom: auto;
+}
+.social-media__title--join {
+	color: $bcg-color-one;
+	@include font(700, 14px, 1.14, 0.03em);
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+footer {
+	display: flex;
+}
+.social-media__link--second {
+	background-color: $social-media-link-bcg-color;
+	transition: background-color $duration $timing-function;
+	fill: $bcg-color-one;
+	&:hover,
+	&:focus {
+		background-color: $accent-color;
+	}
+}

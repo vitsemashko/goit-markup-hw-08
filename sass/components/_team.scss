@@ -1,0 +1,63 @@
+/*Team*/
+.team {
+	background-color: $bcg-color-four;
+	text-align: center;
+	padding-bottom: 94px;
+}
+.team__list {
+	display: flex;
+	justify-content: space-between;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.team__title {
+	@include font(700, 36px, 1.17, 0.03em);
+	color: $primary-color;
+	margin-bottom: 50px;
+}
+.team__item {
+	width: 270px;
+	margin: auto;
+	display: inline-block;
+	background-color: $bcg-color-one;
+	border-radius: 0px 0px 4px 4px;
+	box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
+		0px 1px 3px 0px #0000001f;
+}
+.team__name,
+.team__role {
+	background-color: $bcg-color-one;
+}
+.team__wrapper {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.team__name {
+	@include font(500, 16px, 1.19, 0.03em);
+	text-align: center;
+	color: $primary-color;
+	margin-bottom: 10px;
+}
+.team__role {
+	@include font(400, 16px, 1.19, 0.03em);
+	text-align: center;
+	color: $secondary-color;
+	margin-bottom: 16px;
+}
+.social-media__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.social-media__link--first {
+	background-color: $bcg-color-one;
+	fill: $social-media-icon-fill-color;
+	transition: background-color $duration $timing-function,
+		fill $duration $timing-function;
+	&:hover,
+	&:focus {
+		background-color: $accent-color;
+		fill: $bcg-color-one;
+	}
+}

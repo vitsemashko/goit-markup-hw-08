@@ -1,0 +1,79 @@
+body {
+	font-family: $font-main;
+	background-color: $bcg-color-one;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
+}
+h1,
+h2,
+h3,
+p {
+	margin: 0 auto;
+}
+button {
+	cursor: pointer;
+}
+.container {
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+address {
+	font-style: normal;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}
+.social-media__link {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

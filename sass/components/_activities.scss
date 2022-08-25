@@ -1,0 +1,36 @@
+/*What do we do*/
+#no-padding-top {
+	padding-top: 0;
+}
+.activities {
+	text-align: center;
+	padding-bottom: 94px;
+}
+.activities__title {
+	@include font(700, 36px, 1.17, 0.03em);
+	color: $primary-color;
+
+	margin-bottom: 50px;
+}
+.activities__item {
+	display: inline-block;
+	width: calc((100% - 60px) / 3);
+}
+.activities__list {
+	display: flex;
+	gap: 30px;
+}
+.activities__text {
+	font-family: $font-main;
+	@include font(700, 14px, 1.14, 0.03em);
+	text-transform: uppercase;
+
+	color: $bcg-color-one;
+	background: rgba(47, 48, 58, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 370px;
+	height: 70px;
+	transform: translateY(-100%);
+}

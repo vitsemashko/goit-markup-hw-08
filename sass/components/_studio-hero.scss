@@ -1,0 +1,47 @@
+.studio-hero {
+	padding-top: 200px;
+	padding-bottom: 200px;
+	max-width: 1600px;
+	margin: 0 auto;
+	background-color: rgba(47, 48, 58, 0.4);
+	background-image: linear-gradient(
+			0deg,
+			rgba(0, 0, 0, 0.2),
+			rgba(0, 0, 0, 0.2)
+		),
+		linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+		url(../images/other/bcg-img.jpg);
+	background-size: cover;
+}
+.studio-hero__title {
+	@include font(900, 44px, 1.36, 0.06em);
+	text-align: center;
+	text-transform: uppercase;
+	color: $bcg-color-one;
+	width: 696px;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.button--blue {
+	font-family: inherit;
+	@include font(700, 16px, 1.875, 0.06em);
+	color: $bcg-color-one;
+	background-color: $accent-color;
+	transition: background-color $duration $timing-function,
+		box-shadow $duration $timing-function;
+	box-shadow: 0px 4px 4px 0px #00000026;
+	border-radius: 4px;
+
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0;
+
+	&:hover,
+	&:focus {
+		font-family: inherit;
+		background-color: $btn-secondary-accent-color;
+	}
+}
