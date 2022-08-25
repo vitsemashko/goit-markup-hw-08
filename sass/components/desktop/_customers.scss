@@ -1,0 +1,40 @@
+.customers__title {
+	margin: 0;
+	margin-bottom: 50px;
+	@include font(700, 36px, 1.17, 0.03em);
+	text-align: center;
+	color: $primary-color;
+}
+.customers__list {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	justify-content: center;
+}
+.customers__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 170px;
+	height: 92px;
+	border: 1px solid $social-media-icon-fill-color;
+	transition: border-color $duration $timing-function,
+		color $duration $timing-function;
+	border-radius: 2px;
+	color: $social-media-icon-fill-color;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+		border-color: $accent-color;
+	}
+}
+.customers__icon {
+	fill: currentColor;
+	margin: 0;
+	width: 100%;
+	transition: fill $duration $timing-function;
+	&:hover,
+	&:focus {
+		fill: $accent-color;
+	}
+}

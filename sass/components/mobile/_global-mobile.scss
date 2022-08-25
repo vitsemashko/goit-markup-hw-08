@@ -1,0 +1,86 @@
+body {
+	font-family: $font-main;
+	font-style: normal;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+address,
+nav {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	display: block;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 320px;
+	max-width: 767px;
+}
+.section {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+}
+.activities {
+	display: none;
+}
+.btn {
+	font-family: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 50px;
+	@include font(700, 16px, 1.875, 0.06em);
+	color: $bcg-color-one;
+	background-color: $accent-color;
+	box-shadow: 0px 4px 4px $form-button-subs-shadow-color;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color $duration $timing-function;
+	&:hover,
+	&:focus {
+		background-color: $btn-secondary-accent-color;
+	}
+}

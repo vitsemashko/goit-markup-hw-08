@@ -8,13 +8,30 @@ $accent-color: #2196f3;
 $btn-secondary-accent-color: #188ce8;
 $logo-black: #000000;
 $address-link-color: rgba(255, 255, 255, 0.6);
-$social-media-icon-fill-color: #afb1b8;
-$social-media-link-bcg-color: rgba(255, 255, 255, 0.1);
+
 $header-border-color: #ececec;
 $portfolio-border-color: #eeeeee;
+$studio-hero-bcg-color: rgba(47, 48, 58, 0.4);
+$linear-gradient-color-one: rgba(0, 0, 0, 0.2);
+$button-shadow-color: rgba(0, 0, 0, 0.15);
+$team-card-shadow-color-one: rgba(0, 0, 0, 0.12);
+$team-card-shadow-color-two: rgba(0, 0, 0, 0.14);
+$filter-button-shadow-color-one: rgba(0, 0, 0, 0.1);
+$filter-button-shadow-color-two: rgba(0, 0, 0, 0.08);
+
+$social-media-icon-fill-color: #afb1b8;
+$social-media-link-bcg-color: rgba(255, 255, 255, 0.1);
+$modal-border-color: #0000001a;
+$form-input-border-color: rgba(33, 33, 33, 0.2);
+$form-input-color: rgba(117, 117, 117, 0.5);
+$card-overlay-bcg-color-one: rgba(47, 48, 58, 0.8);
+$card-overlay-bcg-color-two: rgba(33, 150, 243, 0.9);
+$form-input-mail-border-color: rgba(255, 255, 255, 0.3);
+$form-drop-shadow-color: rgba(0, 0, 0, 0.15);
+$form-button-subs-shadow-color: rgba(0, 0, 0, 0.15);
+
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$duration: 250ms;
 
 $font-main: "Roboto", sans-serif;
 $font-second: "Raleway", sans-serif;
-
-$duration: 250ms;
-$timing-function: cubic-bezier(0.4, 0, 0.2, 1);

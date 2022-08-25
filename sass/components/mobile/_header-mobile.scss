@@ -1,0 +1,132 @@
+.page-header {
+	height: 60px;
+	padding-right: 15px;
+	padding-left: 15px;
+
+	position: relative;
+}
+.logo--one {
+	font-family: $font-second;
+	@include font(700, 24px, 1.17, 0.03em);
+	color: $accent-color;
+}
+.logo--two {
+	font-family: $font-second;
+	@include font(700, 24px, 1.17, 0.03em);
+	color: $primary-color;
+}
+.menu-container .logo__link {
+	display: none;
+}
+.menu-container.link {
+	text-decoration: none;
+}
+.menu-button {
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: fill $duration $timing-function;
+	&:hover,
+	&:focus-visible {
+		fill: $accent-color;
+	}
+}
+.menu-button .icon-cross {
+	display: none;
+}
+.menu-button.is-open .icon-cross {
+	display: block;
+}
+.menu-button.is-open .icon-menu {
+	display: none;
+}
+.menu-container {
+	// display: none;
+	background-color: $bcg-color-one;
+	text-align: center;
+	font-size: 20px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	max-width: 480px;
+	min-height: 796px;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity $duration $timing-function,
+		visibility $duration $timing-function, transform $duration $timing-function;
+	&.is-open {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+		pointer-events: initial;
+		z-index: 10;
+	}
+}
+.menu-container .link {
+	font-family: $font-main;
+	@include font(500, 40px, 1.175, 0.02em);
+	color: $primary-color;
+}
+.nav-list {
+	margin-bottom: 60px;
+}
+.nav-list .curent {
+	color: $accent-color;
+}
+.nav-list .link {
+	padding: 20px 0;
+	transition: color $duration $timing-function;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+.contacts {
+	display: inline-flex;
+	flex-direction: column-reverse;
+	align-items: left;
+	justify-content: left;
+	margin-bottom: 30px;
+}
+.contacts__link {
+	font-family: $font-main;
+	padding: 20px 0;
+	@include font(500, 22px, 1.17, 0.02em);
+	color: $secondary-color;
+	transition: color $duration $timing-function;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+.contacts__icon {
+	display: none;
+}
+.social-media__list--header {
+	display: flex;
+	justify-content: center;
+	gap: 35px;
+}
+.social-media__link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	fill: $secondary-color;
+	transition: fill $duration $timing-function,
+		background-color $duration $timing-function;
+	&:hover,
+	&:focus {
+		background-color: $accent-color;
+		fill: $bcg-color-one;
+	}
+}

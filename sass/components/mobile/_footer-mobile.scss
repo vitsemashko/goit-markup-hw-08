@@ -1,0 +1,87 @@
+/*Footer*/
+.page-footer {
+	text-align: center;
+	margin: 0px;
+	background-color: $bcg-color-two;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.logo--second {
+	font-family: $font-second;
+	@include font(700, 26px, 1.19, 0.03em);
+	color: $bcg-color-one;
+}
+.logo__link--inverse {
+	margin-bottom: 20px;
+}
+.address__item .address__link--physical {
+	@include font(400, 14px, 1.71, 0.03em);
+	color: $bcg-color-one;
+}
+.address__item:last-child {
+	margin-bottom: 60px;
+}
+.address__link {
+	@include font(400, 14px, 1.71, 0.03em);
+	color: $address-link-color;
+	padding: 20px 0;
+	transition: color $duration $timing-function;
+
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
+}
+.form__title {
+	@include font(700, 14px, 1.14, 0.03em);
+	text-transform: uppercase;
+	color: $bcg-color-one;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.input--mail {
+	min-width: 250px;
+	height: 50px;
+	margin-bottom: 20px;
+	padding-left: 16px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	color: rgba(255, 255, 255, 0.6);
+	background-color: $bcg-color-two;
+}
+.button--subs {
+	margin: 20px auto 0;
+}
+.button__text {
+	align-items: center;
+	display: flex;
+	margin: 9px 28px;
+}
+.button__icon {
+	flex-shrink: 0;
+	margin-left: 10px;
+}
+.social-media__title--join {
+	text-align: center;
+	margin-bottom: 20px;
+	color: $bcg-color-one;
+	@include font(700, 14px, 1.14, 0.03em);
+	text-transform: uppercase;
+}
+.social-media__list--second {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 60px;
+}
+.social-media__link--second {
+	background-color: $social-media-link-bcg-color;
+	transition: background-color $duration $timing-function;
+	fill: $bcg-color-one;
+	&:hover,
+	&:focus {
+		background-color: $accent-color;
+	}
+}
