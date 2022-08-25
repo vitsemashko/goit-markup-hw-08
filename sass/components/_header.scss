@@ -1,14 +1,30 @@
-header {
+.page-header {
+	height: 60px;
 	margin: 0;
 	border-bottom: 1px solid $header-border-color;
+	@include tablet {
+		height: 80px;
+	}
+	@include desktop {
+		height: 80px;
+	}
 }
 .page-header .container {
+	position: relative;
 	display: flex;
 	align-items: center;
 }
 .logo__link {
-	padding: 25px 0;
+	display: flex;
+	flex-direction: row;
 	margin-right: 93px;
+	padding: 16px 0;
+	@include tablet {
+		padding: 26px 0;
+	}
+	@include desktop {
+		padding: 25px 0;
+	}
 }
 .logo--one {
 	font-family: $font-second;
@@ -20,20 +36,16 @@ header {
 	@include font(700, 26px, 1.19, 0.03em);
 	color: $logo-black;
 	display: inline-block;
-	margin-bottom: auto;
 }
-/*Site-nav*/
 .site-nav {
 	display: flex;
 }
 .site-nav__list {
-	display: flex;
-	gap: 30px;
-}
-.contacts__list {
-	display: flex;
-	gap: 50px;
-	margin-left: auto;
+	display: none;
+	@include tablet {
+		display: flex;
+		gap: 30px;
+	}
 }
 .site-nav__list a {
 	@include font(500, 14px, 1.14, 0.02em);
@@ -61,28 +73,6 @@ header {
 		bottom: 0;
 	}
 }
-/*Contacts*/
-.contacts__link--phone {
-	display: flex;
-	align-items: center;
-}
-.contacts__link--mail {
-	display: flex;
-	align-items: center;
-}
-.contacts__link--mail,
-.contacts__link--phone {
-	padding: 32px 0;
-	margin-left: auto;
-	margin-right: auto;
-	@include font(500, 14px, 1.14, 0.02em);
-	color: $secondary-color;
-	transition: color $duration $timing-function;
-	&:hover,
-	&:focus {
-		color: $accent-color;
-	}
-}
 .icon--envelope {
 	display: inline-block;
 	margin-right: 10px;
@@ -103,4 +93,132 @@ header {
 	&:focus {
 		fill: $accent-color;
 	}
+}
+.menu__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+.menu__item:last-child {
+	margin-bottom: 50px;
+}
+.menu-button {
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: fill $duration $timing-function;
+	&:hover,
+	&:focus-visible {
+		fill: $accent-color;
+	}
+	@include tablet {
+		display: none;
+	}
+}
+.menu-button .icon-cross {
+	display: none;
+}
+.menu-button.is-open .icon-cross {
+	display: block;
+}
+.menu-button.is-open .icon-menu {
+	display: none;
+}
+.menu-container {
+	@include tablet {
+		display: none;
+	}
+	background-color: $bcg-color-one;
+	text-align: center;
+	font-size: 20px;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity $duration $timing-function,
+		visibility $duration $timing-function, transform $duration $timing-function;
+	&.is-open {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+		pointer-events: initial;
+		z-index: 10;
+	}
+}
+.menu-container .link {
+	font-family: $font-main;
+	@include font(500, 40px, 1.175, 0.02em);
+	color: $primary-color;
+}
+.menu-container .curent {
+	color: $accent-color;
+}
+.contacts__link {
+	padding: 32px 0;
+}
+.link--phone {
+	@include font(500, 24px, 1.18, 0.02em);
+	color: $accent-color;
+}
+.link--mail {
+	@include font(500, 24px, 1.18, 0.02em);
+	color: $secondary-color;
+}
+.contacts__list {
+	display: none;
+	@include tablet {
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+	}
+	@include desktop {
+		gap: 50px;
+		flex-direction: row;
+	}
+}
+.contacts__link--phone {
+	display: none;
+	@include tablet {
+		display: block;
+		@include font(500, 12px, 1.17, 0.02em);
+		padding: 10px 0;
+		color: $secondary-color;
+	}
+	@include desktop {
+		@include font(500, 14px, 1.14, 0.02em);
+	}
+}
+.contacts__link--mail {
+	display: none;
+	@include tablet {
+		display: block;
+		@include font(500, 12px, 1.17, 0.02em);
+		padding: 10px 0;
+		color: $secondary-color;
+	}
+	@include desktop {
+		@include font(500, 14px, 1.14, 0.02em);
+	}
+}
+.menu-socials {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+.socials__link {
+	padding: 10px 0;
+	@include font(500, 14px, 1.22, 0.02em);
+	color: $accent-color;
+}
+.socials__item:not(:last-child) {
+	border-right: 1px solid rgba(33, 33, 33, 0.2);
+	padding-right: 10px;
 }

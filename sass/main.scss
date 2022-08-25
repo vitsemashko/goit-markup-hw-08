@@ -1,13 +1,3 @@
 @import "./base/index-base";
 @import "./utils/index-utils";
-
-@import "./components/mobile/index-mobile";
-
-@media (min-width: 768px) {
-	@import "./components/tablet/index-tablet";
-}
-@media (min-width: 1200px) {
-	@import "./components/desktop/index-desktop";
-}
-/*@import "./components/tablet/index-tablet";*/
-/*@import "./components/desktop/index-desktop";*/
+@import "./components/index-components";

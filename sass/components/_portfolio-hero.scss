@@ -16,7 +16,12 @@
 }
 .cards__item {
 	text-align: left;
+	@include tablet{
+		width:calc((100% - 25px) / 2)
+	}
+	@include desktop{
 	width: calc((100% - 50px) / 3);
+	}
 }
 .cards__wrapper {
 	padding: 20px 24px;
