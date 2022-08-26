@@ -9,24 +9,21 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 70px;
 	padding-right: 15px;
 	padding-left: 15px;
-	@include tablet{
+	@include tablet {
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
-	@include desktop{
+	@include desktop {
 		flex-direction: row;
 		flex-wrap: nowrap;
-		justify-content:baseline;
+		justify-content: baseline;
 	}
 }
-.logo-and-address{
+.logo-and-address {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 }
 .logo--second {
 	font-family: $font-second;
@@ -40,16 +37,16 @@
 	@include font(400, 14px, 1.71, 0.03em);
 	color: $bcg-color-one;
 	text-align: center;
-	@include desktop{
+	@include desktop {
 		text-align: left;
 	}
 }
 .address__link {
 	@include font(400, 14px, 1.71, 0.03em);
-	text-align:center;
+	text-align: center;
 	color: $address-link-color;
 	transition: color $duration $timing-function;
-	@include desktop{
+	@include desktop {
 		text-align: left;
 	}
 	&:hover,
@@ -60,24 +57,35 @@
 .address__item:not(:last-child) {
 	margin-bottom: 8px;
 }
-.join-block{
+.join-block {
 	display: flex;
 	flex-direction: column;
+	padding-top: 60px;
+	@include tablet {
+		padding-top: 0;
+		padding-bottom: 40px;
+		padding-left: 100px;
+	}
 }
 .social-media__list {
 	display: flex;
 	gap: 10px;
 }
-.form{
+.form {
 	display: flex;
 	flex-direction: column;
+	margin-top: 60px;
+	@include desktop {
+		padding-bottom: 40px;
+		margin: auto;
+	}
 }
 .form__title {
 	@include font(700, 14px, 1.14, 0.03em);
 	text-transform: uppercase;
 	color: $bcg-color-one;
 	margin-bottom: 20px;
-	@include tablet{
+	@include tablet {
 		text-align: left;
 	}
 }
@@ -90,14 +98,14 @@
 	color: rgba(255, 255, 255, 0.6);
 	background-color: $bcg-color-two;
 	padding-left: 16px;
-	@include mobile{
-		width:450px;
-	}
-	@include tablet{
+	@include mobile {
 		width: 450px;
 	}
-	@include desktop{
-		width:358px;
+	@include tablet {
+		width: 450px;
+	}
+	@include desktop {
+		width: 358px;
 	}
 }
 .btn-in {
@@ -131,7 +139,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
-	@include desktop{
+	@include desktop {
 		flex-direction: row;
 	}
 }
