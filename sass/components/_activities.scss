@@ -1,9 +1,9 @@
-.activities{
+.activities {
 	display: none;
-	@include tablet{
+	@include tablet {
 		display: none;
 	}
-	@include desktop{
+	@include desktop {
 		display: block;
 	}
 }
@@ -30,7 +30,7 @@
 	font-family: $font-main;
 	@include font(700, 14px, 1.14, 0.03em);
 	text-transform: uppercase;
-
+	position: absolute;
 	color: $bcg-color-one;
 	background: rgba(47, 48, 58, 0.8);
 	display: flex;

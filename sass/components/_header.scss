@@ -103,12 +103,13 @@
 .menu-button {
 	display: inline-flex;
 	margin: 0;
+	margin-left: auto;
 	padding: 0;
 	border: none;
 	background-color: transparent;
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 10px;
+	right: 15px;
 	transition: fill $duration $timing-function;
 	&:hover,
 	&:focus-visible {
@@ -145,6 +146,7 @@
 	transition: opacity $duration $timing-function,
 		visibility $duration $timing-function, transform $duration $timing-function;
 	&.is-open {
+		position: fixed;
 		display: block;
 		opacity: 1;
 		visibility: visible;
@@ -156,9 +158,19 @@
 	font-family: $font-main;
 	@include font(500, 40px, 1.175, 0.02em);
 	color: $primary-color;
+	transition: color $duration $timing-function;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
 }
 .menu-container .curent {
 	color: $accent-color;
+	transition: color $duration $timing-function;
+	&:hover,
+	&:focus {
+		color: $btn-secondary-accent-color;
+	}
 }
 .contacts__link {
 	padding: 32px 0;
@@ -166,10 +178,20 @@
 .link--phone {
 	@include font(500, 24px, 1.18, 0.02em);
 	color: $accent-color;
+	transition: color $duration $timing-function;
+	&:hover,
+	&:focus {
+		color: $btn-secondary-accent-color;
+	}
 }
 .link--mail {
 	@include font(500, 24px, 1.18, 0.02em);
 	color: $secondary-color;
+	transition: color $duration $timing-function;
+	&:hover,
+	&:focus {
+		color: $btn-secondary-accent-color;
+	}
 }
 .contacts__list {
 	display: none;
@@ -186,24 +208,38 @@
 .contacts__link--phone {
 	display: none;
 	@include tablet {
-		display: block;
+		display: flex;
+		align-items: center;
 		@include font(500, 12px, 1.17, 0.02em);
 		padding: 10px 0;
 		color: $secondary-color;
+		transition: color $duration $timing-function;
+		&:hover,
+		&:focus {
+			color: $accent-color;
+		}
 	}
 	@include desktop {
+		padding: 32px 0;
 		@include font(500, 14px, 1.14, 0.02em);
 	}
 }
 .contacts__link--mail {
 	display: none;
 	@include tablet {
-		display: block;
+		display: flex;
+		align-items: center;
 		@include font(500, 12px, 1.17, 0.02em);
 		padding: 10px 0;
 		color: $secondary-color;
+		transition: color $duration $timing-function;
+		&:hover,
+		&:focus {
+			color: $accent-color;
+		}
 	}
 	@include desktop {
+		padding: 32px 0;
 		@include font(500, 14px, 1.14, 0.02em);
 	}
 }
@@ -217,6 +253,11 @@
 	padding: 10px 0;
 	@include font(500, 14px, 1.22, 0.02em);
 	color: $accent-color;
+	transition: color $duration $timing-function;
+	&:hover,
+	&:focus {
+		color: $accent-color;
+	}
 }
 .socials__item:not(:last-child) {
 	border-right: 1px solid rgba(33, 33, 33, 0.2);

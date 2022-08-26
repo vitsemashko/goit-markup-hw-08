@@ -4,13 +4,14 @@
 .filter__list {
 	display: inline-flex;
 	margin-bottom: 40px;
-	flex-wrap:wrap;
-	@include tablet{
+	flex-wrap: wrap;
+	@include tablet {
 		flex-wrap: nowrap;
 		margin-bottom: 36px;
 	}
-} 
+}
 .filter__item:not(:last-child) {
+	margin-bottom: 15px;
 	margin-right: 8px;
 }
 .button--grey {

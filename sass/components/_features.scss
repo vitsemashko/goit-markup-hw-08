@@ -16,10 +16,12 @@
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	text-align: left;
 	@include tablet {
 		width: calc((100% - 30px) / 2);
 	}
 	@include desktop {
+		justify-content: initial;
 		width: calc((100% - 90px) / 4);
 	}
 }
@@ -42,6 +44,8 @@
 	margin-bottom: 10px;
 	text-align: center;
 	@include tablet {
+		margin: 0;
+		margin-bottom: 10px;
 		text-align: left;
 	}
 	@include desktop {
