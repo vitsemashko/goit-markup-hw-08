@@ -2,6 +2,9 @@ body {
 	font-family: $font-main;
 	background-color: $bcg-color-one;
 }
+body.modal-open {
+	overflow: hidden;
+}
 h1,
 h2,
 h3,
@@ -33,7 +36,7 @@ h1,
 h2,
 h3,
 p {
-	margin: 0 auto;
+	margin: 0;
 }
 button {
 	cursor: pointer;
@@ -43,22 +46,22 @@ button {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
-	@include mobile{
-		width:480px;
+	@include mobile {
+		width: 480px;
 	}
-	@include tablet{
-		width:768px;
+	@include tablet {
+		width: 768px;
 	}
-	@include desktop{
-		width:1200px;
+	@include desktop {
+		width: 1200px;
 	}
 }
 .section {
 	padding-top: 60px;
 	padding-bottom: 60px;
-	@include desktop{
-	padding-top: 94px;
-	padding-bottom: 94px;
+	@include desktop {
+		padding-top: 94px;
+		padding-bottom: 94px;
 	}
 }
 address {

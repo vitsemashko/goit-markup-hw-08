@@ -177,6 +177,10 @@ body {
   background-color: #ffffff;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -211,7 +215,7 @@ h1,
 h2,
 h3,
 p {
-  margin: 0 auto;
+  margin: 0;
 }
 
 button {
